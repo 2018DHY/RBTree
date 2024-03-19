@@ -7,12 +7,14 @@
 CXX = g++
 
 # define any compile-time flags
-CXXFLAGS	:= -std=c++17 -Wall -Wextra -g -Wl,-subsystem,windows -mthreads 
+CXXFLAGS	:= -std=c++17 -Wall 
+# -Wextra -g -Wl,-subsystem,windows -mthreads 
 
 # define library paths in addition to /usr/lib
 #   if I wanted to include libraries not in /usr/lib I'd specify
 #   their path using -Lpath, something like:
-LFLAGS =-lmingw32 -lshell32 -lQt5Widgets -lQt5Gui -lQt5Core -lqtmain
+LFLAGS =
+# -lmingw32 -lshell32 -lQt5Widgets -lQt5Gui -lQt5Core -lqtmain
 
 # define output directory
 OUTPUT	:= output
@@ -22,19 +24,19 @@ SRC		:= src \
 
 # define include directory
 INCLUDE	:= include \
-C:\Qt\5.15.2\mingw81_64\include \
-C:/Qt/5.15.2/mingw81_64/include/QtWidgets \
-C:/Qt/5.15.2/mingw81_64/include/QtGui \
-C:/Qt/5.15.2/mingw81_64/include/QtCore \
+# C:\Qt\5.15.2\mingw81_64\include \
+# C:/Qt/5.15.2/mingw81_64/include/QtWidgets \
+# C:/Qt/5.15.2/mingw81_64/include/QtGui \
+# C:/Qt/5.15.2/mingw81_64/include/QtCore \
 
 		
 
 # define lib directory
 LIB		:= lib \
-C:\Qt\5.15.2\mingw81_64\lib \
-C:\openssl\lib \
-C:\Utils\my_sql\mysql-5.7.25-winx64\lib \
-C:\Utils\postgresql\pgsql\lib \
+# C:\Qt\5.15.2\mingw81_64\lib \
+# C:\openssl\lib \
+# C:\Utils\my_sql\mysql-5.7.25-winx64\lib \
+# C:\Utils\postgresql\pgsql\lib \
 
 
 ifeq ($(OS),Windows_NT)
